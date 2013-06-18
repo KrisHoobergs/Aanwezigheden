@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PresenceService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54066/PresenceService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54066/PresenceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54066/PresenceService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Aanwezigheden" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPresenceService_getNextSequence_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNextSequence" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getNextSequence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNextSequenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_setNextSequence_InputMessage">
+    <wsdl:part name="parameters" element="tns:setNextSequence" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_setNextSequence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setNextSequenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getPloegen_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPloegen" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getPloegen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPloegenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getSpelers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSpelers" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getSpelers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSpelersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getLastDataEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLastDataEntry" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getLastDataEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLastDataEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getWedstrijd_InputMessage">
+    <wsdl:part name="parameters" element="tns:getWedstrijd" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getWedstrijd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getWedstrijdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getNextTrainingsDatum_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNextTrainingsDatum" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getNextTrainingsDatum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNextTrainingsDatumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getNextDataEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNextDataEntry" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getNextDataEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNextDataEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getNextDataEntryWDatum_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNextDataEntryWDatum" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getNextDataEntryWDatum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNextDataEntryWDatumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getAanwezighedenByPloegAndDatum_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAanwezighedenByPloegAndDatum" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getAanwezighedenByPloegAndDatum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAanwezighedenByPloegAndDatumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_setAanwezigheid_InputMessage">
+    <wsdl:part name="parameters" element="tns:setAanwezigheid" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_setAanwezigheid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setAanwezigheidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_setAanwezigheidSpelers_InputMessage">
+    <wsdl:part name="parameters" element="tns:setAanwezigheidSpelers" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_setAanwezigheidSpelers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setAanwezigheidSpelersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_setUitslag_InputMessage">
+    <wsdl:part name="parameters" element="tns:setUitslag" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_setUitslag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setUitslagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_deleteAanwezigheid_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAanwezigheid" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_deleteAanwezigheid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAanwezigheidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getAanwezighedenOverview_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAanwezighedenOverview" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getAanwezighedenOverview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAanwezighedenOverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getAantalActiviteiten_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAantalActiviteiten" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getAantalActiviteiten_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAantalActiviteitenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getWeekOverzicht_InputMessage">
+    <wsdl:part name="parameters" element="tns:getWeekOverzicht" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getWeekOverzicht_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getWeekOverzichtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getLidTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLidTypes" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getLidTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLidTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMembers" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getSpelersSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSpelersSQL" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getSpelersSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSpelersSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getContactInfoLidByLidID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getContactInfoLidByLidID" />
+  </wsdl:message>
+  <wsdl:message name="IPresenceService_getContactInfoLidByLidID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getContactInfoLidByLidIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPresenceService">
+    <wsdl:operation name="getNextSequence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getNextSequence" message="tns:IPresenceService_getNextSequence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getNextSequenceResponse" message="tns:IPresenceService_getNextSequence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setNextSequence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/setNextSequence" message="tns:IPresenceService_setNextSequence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/setNextSequenceResponse" message="tns:IPresenceService_setNextSequence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPloegen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getPloegen" message="tns:IPresenceService_getPloegen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getPloegenResponse" message="tns:IPresenceService_getPloegen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpelers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getSpelers" message="tns:IPresenceService_getSpelers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getSpelersResponse" message="tns:IPresenceService_getSpelers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLastDataEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getLastDataEntry" message="tns:IPresenceService_getLastDataEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getLastDataEntryResponse" message="tns:IPresenceService_getLastDataEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWedstrijd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getWedstrijd" message="tns:IPresenceService_getWedstrijd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getWedstrijdResponse" message="tns:IPresenceService_getWedstrijd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNextTrainingsDatum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getNextTrainingsDatum" message="tns:IPresenceService_getNextTrainingsDatum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getNextTrainingsDatumResponse" message="tns:IPresenceService_getNextTrainingsDatum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNextDataEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getNextDataEntry" message="tns:IPresenceService_getNextDataEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getNextDataEntryResponse" message="tns:IPresenceService_getNextDataEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNextDataEntryWDatum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getNextDataEntryWDatum" message="tns:IPresenceService_getNextDataEntryWDatum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getNextDataEntryWDatumResponse" message="tns:IPresenceService_getNextDataEntryWDatum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAanwezighedenByPloegAndDatum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getAanwezighedenByPloegAndDatum" message="tns:IPresenceService_getAanwezighedenByPloegAndDatum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getAanwezighedenByPloegAndDatumResponse" message="tns:IPresenceService_getAanwezighedenByPloegAndDatum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setAanwezigheid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/setAanwezigheid" message="tns:IPresenceService_setAanwezigheid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/setAanwezigheidResponse" message="tns:IPresenceService_setAanwezigheid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setAanwezigheidSpelers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/setAanwezigheidSpelers" message="tns:IPresenceService_setAanwezigheidSpelers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/setAanwezigheidSpelersResponse" message="tns:IPresenceService_setAanwezigheidSpelers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setUitslag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/setUitslag" message="tns:IPresenceService_setUitslag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/setUitslagResponse" message="tns:IPresenceService_setUitslag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAanwezigheid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/deleteAanwezigheid" message="tns:IPresenceService_deleteAanwezigheid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/deleteAanwezigheidResponse" message="tns:IPresenceService_deleteAanwezigheid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAanwezighedenOverview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getAanwezighedenOverview" message="tns:IPresenceService_getAanwezighedenOverview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getAanwezighedenOverviewResponse" message="tns:IPresenceService_getAanwezighedenOverview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAantalActiviteiten">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getAantalActiviteiten" message="tns:IPresenceService_getAantalActiviteiten_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getAantalActiviteitenResponse" message="tns:IPresenceService_getAantalActiviteiten_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWeekOverzicht">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getWeekOverzicht" message="tns:IPresenceService_getWeekOverzicht_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getWeekOverzichtResponse" message="tns:IPresenceService_getWeekOverzicht_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLidTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getLidTypes" message="tns:IPresenceService_getLidTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getLidTypesResponse" message="tns:IPresenceService_getLidTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMembers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getMembers" message="tns:IPresenceService_getMembers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getMembersResponse" message="tns:IPresenceService_getMembers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpelersSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getSpelersSQL" message="tns:IPresenceService_getSpelersSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getSpelersSQLResponse" message="tns:IPresenceService_getSpelersSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getContactInfoLidByLidID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPresenceService/getContactInfoLidByLidID" message="tns:IPresenceService_getContactInfoLidByLidID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPresenceService/getContactInfoLidByLidIDResponse" message="tns:IPresenceService_getContactInfoLidByLidID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPresenceService" type="tns:IPresenceService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getNextSequence">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getNextSequence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNextSequence">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/setNextSequence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPloegen">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getPloegen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpelers">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getSpelers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastDataEntry">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getLastDataEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWedstrijd">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getWedstrijd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNextTrainingsDatum">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getNextTrainingsDatum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNextDataEntry">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getNextDataEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNextDataEntryWDatum">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getNextDataEntryWDatum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAanwezighedenByPloegAndDatum">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getAanwezighedenByPloegAndDatum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setAanwezigheid">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/setAanwezigheid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setAanwezigheidSpelers">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/setAanwezigheidSpelers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUitslag">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/setUitslag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAanwezigheid">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/deleteAanwezigheid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAanwezighedenOverview">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getAanwezighedenOverview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAantalActiviteiten">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getAantalActiviteiten" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWeekOverzicht">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getWeekOverzicht" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLidTypes">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getLidTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMembers">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpelersSQL">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getSpelersSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContactInfoLidByLidID">
+      <soap:operation soapAction="http://tempuri.org/IPresenceService/getContactInfoLidByLidID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PresenceService">
+    <wsdl:port name="BasicHttpBinding_IPresenceService" binding="tns:BasicHttpBinding_IPresenceService">
+      <soap:address location="http://localhost:54066/PresenceService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

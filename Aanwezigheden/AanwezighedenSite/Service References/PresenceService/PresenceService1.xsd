@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Aanwezigheden" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Aanwezigheden" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPloeg">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ploeg" nillable="true" type="tns:Ploeg" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPloeg" nillable="true" type="tns:ArrayOfPloeg" />
+  <xs:complexType name="Ploeg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplaySequence" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PloegId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ploeg" nillable="true" type="tns:Ploeg" />
+  <xs:complexType name="ArrayOfLid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lid" nillable="true" type="tns:Lid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLid" nillable="true" type="tns:ArrayOfLid" />
+  <xs:complexType name="Lid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LidId" type="xs:int" />
+      <xs:element minOccurs="0" name="Naam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Voornaam" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Lid" nillable="true" type="tns:Lid" />
+  <xs:complexType name="ArrayOfWedstrijd">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Wedstrijd" nillable="true" type="tns:Wedstrijd" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWedstrijd" nillable="true" type="tns:ArrayOfWedstrijd" />
+  <xs:complexType name="Wedstrijd">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tegenstander" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Thuis" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Uitslag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WedstrijdDatum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WedstrijdId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Wedstrijd" nillable="true" type="tns:Wedstrijd" />
+  <xs:complexType name="ArrayOfAanwezigheid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Aanwezigheid" nillable="true" type="tns:Aanwezigheid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAanwezigheid" nillable="true" type="tns:ArrayOfAanwezigheid" />
+  <xs:complexType name="Aanwezigheid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Datum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Tegenstander" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Aanwezigheid" nillable="true" type="tns:Aanwezigheid" />
+  <xs:complexType name="ArrayOfAanwezigheidSpeler">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AanwezigheidSpeler" nillable="true" type="tns:AanwezigheidSpeler" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAanwezigheidSpeler" nillable="true" type="tns:ArrayOfAanwezigheidSpeler" />
+  <xs:complexType name="AanwezigheidSpeler">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AanwezigheidId" type="xs:int" />
+      <xs:element minOccurs="0" name="AanwezigheidSpelersId" type="xs:int" />
+      <xs:element minOccurs="0" name="LidId" type="xs:int" />
+      <xs:element minOccurs="0" name="Naam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NietVoldoendeGespeeld" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Reden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Voornaam" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AanwezigheidSpeler" nillable="true" type="tns:AanwezigheidSpeler" />
+  <xs:complexType name="ArrayOfOverzichtAanwezigheid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OverzichtAanwezigheid" nillable="true" type="tns:OverzichtAanwezigheid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOverzichtAanwezigheid" nillable="true" type="tns:ArrayOfOverzichtAanwezigheid" />
+  <xs:complexType name="OverzichtAanwezigheid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aanwezig" type="xs:short" />
+      <xs:element minOccurs="0" name="beurtrol" type="xs:short" />
+      <xs:element minOccurs="0" name="blessure" type="xs:short" />
+      <xs:element minOccurs="0" name="blessureaanwezig" type="xs:short" />
+      <xs:element minOccurs="0" name="disciplinair" type="xs:short" />
+      <xs:element minOccurs="0" name="doorgeschoven" type="xs:short" />
+      <xs:element minOccurs="0" name="geschorst" type="xs:short" />
+      <xs:element minOccurs="0" name="keeperstraining" type="xs:short" />
+      <xs:element minOccurs="0" name="naam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nietgeselecteerd" type="xs:short" />
+      <xs:element minOccurs="0" name="nietverwittigd" type="xs:short" />
+      <xs:element minOccurs="0" name="nietvoldoendegespeeld" type="xs:int" />
+      <xs:element minOccurs="0" name="selectie" type="xs:short" />
+      <xs:element minOccurs="0" name="speelgelegenheid" type="xs:int" />
+      <xs:element minOccurs="0" name="telaat" type="xs:short" />
+      <xs:element minOccurs="0" name="testen" type="xs:short" />
+      <xs:element minOccurs="0" name="vakantie" type="xs:short" />
+      <xs:element minOccurs="0" name="verwittigd" type="xs:short" />
+      <xs:element minOccurs="0" name="voornaam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ziek" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OverzichtAanwezigheid" nillable="true" type="tns:OverzichtAanwezigheid" />
+  <xs:complexType name="ArrayOfWeekOverzicht">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WeekOverzicht" nillable="true" type="tns:WeekOverzicht" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWeekOverzicht" nillable="true" type="tns:ArrayOfWeekOverzicht" />
+  <xs:complexType name="WeekOverzicht">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dinsdag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="donderdag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maandag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="naam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="voornaam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vrijdag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="woensdag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zaterdag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zondag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WeekOverzicht" nillable="true" type="tns:WeekOverzicht" />
+  <xs:complexType name="ArrayOfLidType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LidType" nillable="true" type="tns:LidType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLidType" nillable="true" type="tns:ArrayOfLidType" />
+  <xs:complexType name="LidType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LidTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LidType" nillable="true" type="tns:LidType" />
+  <xs:complexType name="ArrayOfMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Member" nillable="true" type="tns:Member" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMember" nillable="true" type="tns:ArrayOfMember" />
+  <xs:complexType name="Member">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fullname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Geboortejaar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LidId" type="xs:int" />
+      <xs:element minOccurs="0" name="Naam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Voornaam" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Member" nillable="true" type="tns:Member" />
+  <xs:complexType name="ArrayOfContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactInfo" nillable="true" type="tns:ContactInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactInfo" nillable="true" type="tns:ArrayOfContactInfo" />
+  <xs:complexType name="ContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="emailMoeder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailSpeler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailVader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="familienaamSpeler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gsmMoeder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gsmSpeler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gsmVader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="naamMoeder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="naamSpeler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="naamVader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telMoeder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telSpeler" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telVader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="voornaamSpeler" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactInfo" nillable="true" type="tns:ContactInfo" />
+</xs:schema>

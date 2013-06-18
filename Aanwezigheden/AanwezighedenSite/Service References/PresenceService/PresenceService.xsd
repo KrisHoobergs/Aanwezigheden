@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54066/PresenceService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Aanwezigheden" />
+  <xs:element name="getNextSequence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tablename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNextSequenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getNextSequenceResult" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setNextSequence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="next_value" type="xs:int" />
+        <xs:element minOccurs="0" name="tablename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setNextSequenceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPloegen">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPloegenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getPloegenResult" nillable="true" type="q1:ArrayOfPloeg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpelers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpelersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getSpelersResult" nillable="true" type="q2:ArrayOfLid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLastDataEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLastDataEntryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getLastDataEntryResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getWedstrijd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegId" type="xs:int" />
+        <xs:element minOccurs="0" name="lastDataEntryDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="previous" type="xs:boolean" />
+        <xs:element minOccurs="0" name="current" type="xs:boolean" />
+        <xs:element minOccurs="0" name="next" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getWedstrijdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getWedstrijdResult" nillable="true" type="q3:ArrayOfWedstrijd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNextTrainingsDatum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegid" type="xs:int" />
+        <xs:element minOccurs="0" name="datum" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNextTrainingsDatumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getNextTrainingsDatumResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNextDataEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNextDataEntryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getNextDataEntryResult" nillable="true" type="q4:ArrayOfAanwezigheid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNextDataEntryWDatum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegid" type="xs:int" />
+        <xs:element minOccurs="0" name="datum" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getNextDataEntryWDatumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getNextDataEntryWDatumResult" nillable="true" type="q5:ArrayOfAanwezigheid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAanwezighedenByPloegAndDatum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegId" type="xs:int" />
+        <xs:element minOccurs="0" name="datum" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAanwezighedenByPloegAndDatumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getAanwezighedenByPloegAndDatumResult" nillable="true" type="q6:ArrayOfAanwezigheidSpeler" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setAanwezigheid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegid" type="xs:int" />
+        <xs:element minOccurs="0" name="activiteittype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="datum" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="opmerking" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activity" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setAanwezigheidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setAanwezigheidResult" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setAanwezigheidSpelers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aanwezigheidid" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="_aanwezigheidspelers" nillable="true" type="q7:ArrayOfAanwezigheidSpeler" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setAanwezigheidSpelersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setAanwezigheidSpelersResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setUitslag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="wedstrijdID" type="xs:int" />
+        <xs:element minOccurs="0" name="wedstrijdUitslag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setUitslagResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteAanwezigheid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aanwezigheidID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleteAanwezigheidResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAanwezighedenOverview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAanwezighedenOverviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getAanwezighedenOverviewResult" nillable="true" type="q8:ArrayOfOverzichtAanwezigheid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAantalActiviteiten">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAantalActiviteitenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aantalWedstrijden" type="xs:int" />
+        <xs:element minOccurs="0" name="aantalTrainingen" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getWeekOverzicht">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ploegID" type="xs:int" />
+        <xs:element minOccurs="0" name="datum" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getWeekOverzichtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getWeekOverzichtResult" nillable="true" type="q9:ArrayOfWeekOverzicht" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLidTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLidTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getLidTypesResult" nillable="true" type="q10:ArrayOfLidType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMembers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="naam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="voornaam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ploegId" type="xs:int" />
+        <xs:element minOccurs="0" name="lidTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="geboortejaar" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMembersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getMembersResult" nillable="true" type="q11:ArrayOfMember" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpelersSQL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="naam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="voornaam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ploegId" type="xs:int" />
+        <xs:element minOccurs="0" name="lidTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="geboortejaar" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSpelersSQLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getSpelersSQLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getContactInfoLidByLidID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lidID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getContactInfoLidByLidIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Aanwezigheden" minOccurs="0" name="getContactInfoLidByLidIDResult" nillable="true" type="q12:ArrayOfContactInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

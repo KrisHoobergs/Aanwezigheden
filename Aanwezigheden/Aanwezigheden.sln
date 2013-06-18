@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aanwezigheden", "Aanwezigheden\Aanwezigheden.csproj", "{27AF7868-3AC0-458D-B2E4-E5F028A44639}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AanwezighedenSite", "AanwezighedenSite\AanwezighedenSite.csproj", "{2B95EEBA-B223-4932-82EE-0901EA7484FB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27AF7868-3AC0-458D-B2E4-E5F028A44639} = {27AF7868-3AC0-458D-B2E4-E5F028A44639}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27AF7868-3AC0-458D-B2E4-E5F028A44639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AF7868-3AC0-458D-B2E4-E5F028A44639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27AF7868-3AC0-458D-B2E4-E5F028A44639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27AF7868-3AC0-458D-B2E4-E5F028A44639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B95EEBA-B223-4932-82EE-0901EA7484FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B95EEBA-B223-4932-82EE-0901EA7484FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B95EEBA-B223-4932-82EE-0901EA7484FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B95EEBA-B223-4932-82EE-0901EA7484FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,54 @@
+﻿<controls:ChildWindow xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="AanwezighedenSite.Info"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="600" Height="400" 
+           Title="Info" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <toolkit:Accordion  Height="321" HorizontalAlignment="Left" Margin="5,5,0,0" Name="info" VerticalAlignment="Top" Width="565" Background="White">
+            <toolkit:AccordionItem  Background="#9cbc5a" Header="Gebruik" >
+                <TextBlock Foreground="White" TextWrapping="Wrap" Margin="5,5,5,5" HorizontalAlignment="Center" Height="196" Width="546">
+                    Voor de opvolging van de aanwezigheden van de spelers vraagt de club aan de trainers de aanwezigheden van de spelers te noteren. Dit kan men doen als volgt
+                    <LineBreak></LineBreak> 
+                    <LineBreak></LineBreak>
+                    • Kies eerst de ploeg waarvan u trainer bent<LineBreak></LineBreak>
+                    • Kies, indien nodig, de gewenste datum waarvoor u de aanwezigheden wil ingeven<LineBreak></LineBreak>
+                    • Nu kan u de status voor iedere speler apart ingeven<LineBreak></LineBreak>
+                    • Druk op de knop bewaren<LineBreak></LineBreak><LineBreak></LineBreak>
+                    ! Lees ook de weetjes voor een beter gebruikerservaring
+                </TextBlock>
+            </toolkit:AccordionItem>
+            <toolkit:AccordionItem  Background="#9cbc5a" Header="Weetjes" >
+                
+                <TextBlock Foreground="White" TextWrapping="Wrap" Margin="5,5,5,5" HorizontalAlignment="Center" Height="189" Width="546">
+                    • Eenmaal u data hebt ingegeven stelt het systeem u de datum voor voor volgende ingave, dit is altijd een training of wedstrijd.  Dit is gebaseerd op data die in de clubdatabase aanwezig zijn.  Indien de voorgestelde datum niet correct is kan het zijn dat uw trainingsdagen niet correct in de clubdatabase aanwezig zijn. 
+                    <LineBreak></LineBreak><LineBreak></LineBreak>
+                    • Als de voorgestelde datum een wedstrijddatum is zal het datumvak groen kleuren en kan u de tegenstander bekijken door de muiscursor op het groene datumvak te plaatsen.
+                    <LineBreak></LineBreak><LineBreak></LineBreak>
+                    • Indien bijna iedereen op training aanwezig was kan u met de linkermuisknop op de kolomhoofdig "status" klikken en zal elke speler van de ploeg status aanwezig krijgen.  De spelers die een andere status nodig hebben kan u nadien aanpassen.
+                    
+                </TextBlock>
+                   
+            </toolkit:AccordionItem>
+
+            <toolkit:AccordionItem  Background="#9cbc5a" Header="Problemen" >
+                <StackPanel >
+                <TextBlock Foreground="White" TextWrapping="Wrap" Margin="5,5,5,5" HorizontalAlignment="Center" Height="194" Width="546">
+                    • Gelieve te laten weten als de voorgestelde spelers van uw ploeg niet correct zijn.<LineBreak></LineBreak><LineBreak></LineBreak>
+                    • Gelieve te laten weten als uw trainingsdagen voor een langere periode (meer als een maand) wijzigen.<LineBreak></LineBreak><LineBreak></LineBreak>
+                    • Gelieve een bericht te laten indien u op een bepaalde datum wedstrijd hebt gehad en het systeem dit niet als wedstrijd aangeeft.<LineBreak></LineBreak><LineBreak></LineBreak>
+                    • Gelieve alle problemen te melden zodat we verbeteringen kunnen aanbrengen, ook ideeën voor uitbreidingen zijn welkom! <LineBreak></LineBreak><LineBreak></LineBreak>
+                    • Er kan altijd, na afspraak, een persoonlijke introductie gegeven worden over het gebruik. <LineBreak></LineBreak>
+                </TextBlock>
+                    <HyperlinkButton BorderThickness="0" Foreground="DarkGreen" Content="Klik hier om een probleem/idee te melden" NavigateUri="mailto:webteam@kskh-jeugd.be?SUBJECT=Problemen ingeven aanwezigheden" ></HyperlinkButton>
+                </StackPanel>
+            </toolkit:AccordionItem>
+        </toolkit:Accordion>
+        
+    </Grid>
+</controls:ChildWindow>
